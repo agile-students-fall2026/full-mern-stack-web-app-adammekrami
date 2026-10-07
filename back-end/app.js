@@ -77,6 +77,24 @@ app.post('/messages/save', async (req, res) => {
     })
   }
 })
+//section for AboutUS
+app.get('/AboutUs', async (req, res) =>{
+  
+    res.json({
+      bio: 'Hello, my name is Adam Mekrami. I am a senior in CAS '
+      + 'majoring in computer science and minoring in business studies. '
+      + 'I am on the varsity swim team here at NYU, which keeps me busy throughout the year. '
+      + 'I am from New Jersey, and spend my summers lifeguarding at the beach. My hobbies '
+      + 'include surfing, traveling, hiking, and working out. After graduation, I aspire '
+      + 'to be a software engineer. I would like to work either in NYC or on the West Coast '
+      + 'for a few years. After which, I would like to work remotely, which would allow me to '
+      + 'fulfill my dream of traveling the world. I would also like to gain enough experience '
+      + 'as a SWE, which would help give me the knowledge to found my own startup.',
+
+      imageURL: '/headshot.JPG'
+    })
+
+})
 
 // export the express app we created to make it available to other modules
 module.exports = app // CommonJS export style!
